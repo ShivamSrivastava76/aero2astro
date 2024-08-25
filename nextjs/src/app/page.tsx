@@ -35,7 +35,7 @@ export default function Home() {
     // Handle form submission
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setData(formData);
+        setData(formData);  // Now `data` can accept the `formData` object
     };
 
     return (

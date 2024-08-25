@@ -1,7 +1,6 @@
 'use client'
 import { useState } from "react";
 import Maps from "./compound";
-import axios from "axios";
 
 // Define a type for the form data
 type FormData = {
@@ -13,7 +12,7 @@ type FormData = {
 export default function Home() {
     
     // Initialize data state with the correct type
-    const [data, setData] = useState<FormData | undefined>(undefined);
+    const [data, setData] = useState<FormData | null>(null);
 
     // Initialize formData state with the correct type
     const [formData, setFormData] = useState<FormData>({

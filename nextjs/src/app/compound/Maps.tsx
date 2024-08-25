@@ -10,12 +10,10 @@ export default function Maps({ data }: any) {
 
 
   useEffect(() => {
-    if (data !== undefined) {
-      if (data.latitude !== '') {
-        fetchPilots(data.latitude, data.longitude, data.range);
-      } else {
-        currentLocation();
-      }
+    if (data && data.latitude !== '') {
+      fetchPilots(data.latitude, data.longitude, data.range);
+    } else {
+      currentLocation();
     }
   }, [data]);
 
